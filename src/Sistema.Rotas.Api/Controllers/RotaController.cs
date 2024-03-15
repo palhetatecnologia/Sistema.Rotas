@@ -98,7 +98,7 @@ namespace Sistema.Rotas.Api.Controllers
         [SwaggerResponse(422, type: typeof(IEnumerable<RotaQueryResult>), description: "Codigo de retorno quando o método processou a solicitação so client")]
         [SwaggerResponse(200, type: typeof(IEnumerable<RotaQueryResult>), description: "Codigo de retorno quando o método processou a solicitação so client")]
         [SwaggerResponse(200, type: typeof(IEnumerable<RotaQueryResult>), description: "Codigo de retorno quando o método processou a solicitação so client")]
-        [HttpPost("verificar-rota-assessivel")]
+        [HttpPost("verificar-rota-acessivel")]
         public async Task<IActionResult> VeirificarRoraAssessivel([FromBody] RotaVerifyCommand command)
         {
             var result = _rotaHandler.Handler(command);
